@@ -1,0 +1,14 @@
+{
+  "log_level": "INFO",
+  "poll_interval": 30,
+  "delete_allowed_prefixes": ["/tmp/"],
+  "users": [
+    {"name": "alice", "quota": 3},
+    {"name": "bob", "quota": 5}
+  ],
+  "tasks": [
+    {"user": "alice", "at": "12:00", "action": "sync", "target": "/data/x"},
+    {"user": "bob", "at": "12:00", "action": "backup", "target": "/srv/y"},
+    {"user": "alice", "at": "12:00", "action": "delete", "target": "/tmp/z"}
+  ]
+}

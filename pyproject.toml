@@ -1,0 +1,19 @@
+[project]
+name = "twm-test"
+version = "0.1.0"
+description = "Simple task scheduling system with per-user quotas"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.162.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
